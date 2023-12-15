@@ -1,0 +1,51 @@
+<form id="reunionForm" method='POST' action="">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="form-group col-md-4">
+      <label for="usuario" class="control-label">Nombre Usuario</label>
+      <div class="input-group">
+          <input type="text" class="form-control" placeholder="Buscar&hellip;" name="username" value="{{{USER.username}}}" id="username" >
+          <span class="input-group-btn">
+              <button name="buscar" value="1" type="submit" formaction="?c=usuarios&amp;a=alta" class="btn btn-default"><i class="fa fa-search"></i></button>
+          </span>
+      </div>
+    </div>      
+  </div>
+  <div class="row">
+    <div class="col-md-4"></div>    
+    <div class="form-group col-md-4">
+      <label for="nombre" class="control-label">Nombre y Apellido</label>
+      <input class="form-control" name="nombre" value ="{{{USER.nombre}}} {{{USER.apellido}}}" readonly />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4"></div>    
+    <div class="form-group col-md-4">
+      <label for="email" class="control-label">Email</label>
+      <input class="form-control" value ="{{{USER.email}}}" name="email" readonly/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4"></div>    
+    <div class="form-group col-md-4">
+      <label class="control-label" for="rol">Rol</label>
+      <select class="form-control" id="rol" type="text" name="rol"/>
+        <option disabled selected value="">Seleccione un Rol</option>
+        {{{ROLES}}}
+        <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+        {{{/ROLES}}}
+      </select>
+    </div>
+  </div>
+
+<br>
+<br>
+<br>
+  <div class="row">
+    <div class="col-md-4"></div>    
+    <div class="col-md-4 text-right">
+      <button type="submit" class="btn btn-primary" data-placement="left" value="1" name="guardar" id="guardar">GUARDAR</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+  </div>
+</form>

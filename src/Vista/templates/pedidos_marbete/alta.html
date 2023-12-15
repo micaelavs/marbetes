@@ -1,0 +1,68 @@
+<form id="{{{FORM}}}" method='POST' action="">
+<div class="row">
+  <div class="col-md-6">
+      <label class="control-label" for="id_empresa">Empresa<span class="text-danger"> *</span></label>
+        <select class="form-control" id="id_empresa" name="id_empresa">
+            <option value=""> Seleccione </option>
+            {{{EMPRESA}}}
+              <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+            {{{/EMPRESA}}}
+        </select>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group">
+      <label class="control-label" for="razon_social">CUIT<span class="required">*</span></label>
+      <span class="form-control" id="cuit" disabled>{{{CUIT}}}</span>
+    </div>
+  </div> 
+  <div class="col-md-3">
+    <div class="form-group">
+      <label class="control-label" for="codigo_cnrt">Código CNRT<span class="required">*</span></label>
+      <span class="form-control" id="codigo_cnrt" name="codigo_cnrt" disabled>{{{CODIGO_CNRT}}}</span>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3">
+      <label class="control-label" for="id_imprenta">Imprenta<span class="text-danger"> *</span></label>
+        <select class="form-control" id="id_imprenta" name="id_imprenta">
+          <option value=""> Seleccione </option>
+          {{{IMPRENTA}}}
+            <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/IMPRENTA}}}
+        </select>
+  </div>
+  <div class="col-md-3">
+      <label class="control-label" for="id_tipo_marbete">Tipo Marbete<span class="text-danger"> *</span></label>
+        <select class="form-control" id="id_tipo_marbete" name="id_tipo_marbete">
+          <option value=""> Seleccione </option>
+          {{{TIPO_MARBETE}}}
+            <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/TIPO_MARBETE}}}
+        </select>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group">
+      <label for="fecha_solicitud" class="control-label">Fecha solicitud<span class="text-danger"> *</span></label>
+      <div class='input-group date fecha_solicitud'>
+        <input type='text' class="form-control" id="fecha_solicitud" name="fecha_solicitud" value="{{{FECHA_SOLICITUD}}}">
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group">
+        <label class="control-label" for="cantidad">Cantidad<span class="required">*</span></label>
+        <input type='number' class="form-control" id="cantidad" name="cantidad" value="{{{CANTIDAD}}}">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3"></div>
+   <div class="col-md-3"></div>
+    <div class="col-md-6 text-right">
+      <button type="submit" class="btn btn-primary" data-placement="left" name="boton_pedido" value="{{{OPERACION}}}" id='boton_pedido' title="Guardar">GUARDAR</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+</div>
+</form>

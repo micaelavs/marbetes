@@ -1,0 +1,20 @@
+[1mdiff --git a/src/Vista/auditorias/index.php b/src/Vista/auditorias/index.php[m
+[1mindex 9a837fb..373dc6b 100644[m
+[1m--- a/src/Vista/auditorias/index.php[m
+[1m+++ b/src/Vista/auditorias/index.php[m
+[36m@@ -13,11 +13,11 @@[m [m$vars_template['IMPRENTA']				= \FMT\Helper\Template::select_block($imprentas);[m
+ $vars_template['TIPO_MARBETE']			= \FMT\Helper\Template::select_block($tipos_marbetes);[m
+ $vars_template['CAMARA']				= \FMT\Helper\Template::select_block($camaras);[m
+ $vars_vista['JS_FOOTER'][]['JS_SCRIPT'] = \App\Helper\Vista::get_url('script.js');[m
+[31m-$vars_vista['CSS_FILES'][]['CSS_FILE'] = $vista->getSystemConfig()['app']['endpoint_cdn'] . '/datatables/1.10.12/datatables.min.css';[m
+[31m-$vars_vista['JS_FILES'][]['JS_FILE'] = $vista->getSystemConfig()['app']['endpoint_cdn'] . "/datatables/1.10.12/datatables.min.js";[m
+[31m-$vars_vista['JS_FILES'][]['JS_FILE'] = $vista->getSystemConfig()['app']['endpoint_cdn'] . "/datatables/defaults.js";[m
+[31m-$vars_vista['JS_FILES'][]['JS_FILE'] = $vista->getSystemConfig()['app']['endpoint_cdn'] . "/datatables/1.10.12/plugins/sorting/datetime-moment.js";[m
+ $vars_vista['JS_FOOTER'][]['JS_SCRIPT']    = Vista::get_url('auditorias/auditoria.js');[m
+[32m+[m[32m$vars_vista['CSS_FILES'][]  = ['CSS_FILE' => $vista->getSystemConfig()['app']['endpoint_cdn'].'/datatables/1.10.12/datatables.min.css'];[m
+[32m+[m[32m$vars_vista['JS_FILES'][]   = ['JS_FILE' => $vista->getSystemConfig()['app']['endpoint_cdn']."/datatables/1.10.12/datatables.min.js"];[m
+[32m+[m[32m$vars_vista['JS_FILES'][]   = ['JS_FILE' => $vista->getSystemConfig()['app']['endpoint_cdn']."/datatables/defaults.js"];[m
+[32m+[m
+ $base_url = Vista::get_url('index.php');[m
+ [m
+ $vars_vista['JS'][]['JS_CODE'] = <<<JS[m

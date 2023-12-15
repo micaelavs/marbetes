@@ -1,0 +1,101 @@
+<div class="row subtitulo">
+    <div class="col-md-12 text-left"><h6 class="dom"><i class="fa fa-book"></i> Reporte</h6></div>
+</div>
+<br>
+<div class="row" id="url-base" template data_url='{{{URL_BASE}}}'>
+    <div class="col-xs-12">
+        <a role="button" data-toggle="collapse" href="#collapseFiltros" aria-expanded="false"
+            aria-controls="collapseFiltros" style="display: block;">
+            <span class="">
+                <i class="fa fa-filter"></i> Filtros
+                <i class="fa fa-caret-right fa-fw" id="collapseFiltros_caret"></i>
+            </span>
+        </a>
+        <div class="collapse tabla" id="collapseFiltros">
+            <div class="">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="form-group">
+                            <label for="empresa" class="control-label">Empresa: </label>
+                            <select name="empresa" id="empresa" class="form-control">
+                                <option value="">Seleccione</option>
+                                {{{EMPRESA}}}
+                                <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+                                {{{/EMPRESA}}}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="form-group">
+                            <label for="imprenta" class="control-label">Imprenta</label>
+                            <select name="imprenta" id="imprenta" class="form-control">
+                                <option value="">Seleccione</option>
+                                {{{IMPRENTA}}}
+                                <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+                                {{{/IMPRENTA}}}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="form-group">
+                            <label for="tipo_marbete" class="control-label">Tipo Marbete</label>
+                            <select name="tipo_marbete" id="tipo_marbete" class="form-control">
+                                <option value="">Seleccione</option>
+                                {{{TIPO_MARBETE}}}
+                                <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+                                {{{/TIPO_MARBETE}}}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="form-group">
+                            <label for="camara" class="control-label">Cámara: </label>
+                            <select name="camara" id="camara" class="form-control">
+                                <option value="">Seleccione</option>
+                                {{{CAMARA}}}
+                                <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+                                {{{/CAMARA}}}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="form-group">
+                            <label for="fecha_desde" class="control-label">Fecha Desde</label>
+                            <div class="input-group date">
+                                <input type="text" class="form-control" id="fecha_desde"
+                                    name="fecha_desde" value="">
+                                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="form-group">
+                            <label for="fecha_hasta" class="control-label">Fecha Hasta</label>
+                            <div class="input-group date">
+                                <input type="text" class="form-control fecha" id="fecha_hasta"
+                                    name="fecha_hasta" value="">
+                                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div id='auditoria' class="col-md-12">
+        {{{TABLA}}}
+    </div>
+</div>
+<div>
+    <div class="col-md-10 text-left">
+        <button class="btn btn-default btn_au accion_exportador" style="margin-left:-35px;" value="{{{BOTON_EXCEL}}}"><span
+                class="fa fa-file-text-o"></span> DESCARGAR EXCEL</button>
+    </div>
+</div>

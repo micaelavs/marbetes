@@ -1,0 +1,1 @@
+ALTER TABLE tipo_marbete MODIFY borrado tinyint(2) NOT NULL DEFAULT 0;

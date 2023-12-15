@@ -1,0 +1,6 @@
+/vendor
+/config
+/uploads
+error.log
+access.log
+version

@@ -1,0 +1,68 @@
+<form id="{{{FORM}}}" method='POST' action="" enctype="multipart/form-data" class="alta_imprenta">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" for="cuit">CUIT<span class="text-danger"> * </span></label>
+                <input type="text" class="form-control" id="cuit" name="cuit" value="{{{CUIT}}}">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" for="razon_social">Razon social<span class="text-danger"> * </span></label>
+                <input type="text" class="form-control" id="razon_social" name="razon_social" value="{{{RAZON_SOCIAL}}}">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" for="direccion">Direccion<span class="text-danger"> * </span></label>
+                <input type="text" class="form-control" id="direccion" name="direccion" value="{{{DIRECCION}}}">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="fecha_ultima_revision" class="control-label">Fecha última revisión<span class="text-danger"> *</span></label>
+                <div class='input-group date fecha_ultima_revision'>
+                    <input type='text' class="form-control" id="fecha_ultima_revision" name="fecha_ultima_revision" value="{{{FECHA_ULTIMA_REVISION}}}">
+                    <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 text-right">
+            <br>
+            <br>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="inscripcion_afip" name="inscripcion_afip" value="{{{INSCRIPCION_AFIP}}}" {{{CHECKED_1}}}> Inscripción en AFIP
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="modelo_marbete" name="modelo_marbete" value="{{{MODELO_MARBETE}}}" {{{CHECKED_2}}} > Modelo de Marbete
+            </label>
+        </div>
+    </div>   
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="observacion" class="control-label">Observación</label>
+                <textarea style="height: 10em;" class="form-control" id="observacion" name="observacion">{{{OBSERVACION}}}</textarea>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 text-right">
+            <button type="submit" class="btn btn-primary" data-placement="left" name="boton_imprenta" value="{{{OPERACION}}}" id='boton_imprenta' title="Guardar">GUARDAR</button>
+            <a href="{{{CANCELAR}}}" class="btn btn-default">CANCELAR</a>
+        </div>
+    </div>
+</form

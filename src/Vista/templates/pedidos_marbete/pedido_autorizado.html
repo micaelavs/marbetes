@@ -1,0 +1,200 @@
+<style type="text/css">
+
+    head.p{
+            margin: 0cm;
+            float: left;
+            text-align: left;
+            text-align: left;
+            font-size: 10pt;
+            font-style: italic;
+    }
+
+    .datos_contenido {
+        padding-left: 50px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .fecha_superior{
+        text-align: right;
+    }
+
+    .just {
+        text-align: justify;
+    }
+
+    .izq{
+        text-align: left;
+    }
+
+    .primeralinea {
+        text-indent: 40px;
+    }
+
+    .gris {
+        color: gray;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .subt{
+        text-decoration: underline;
+    }
+
+    .tablaGris {
+        font-size: 10px;
+        color: #333333;
+        width: 100%;
+        border-width: 1px;
+        border-color: black;
+        border-collapse:collapse;
+    }
+    .tablaGris th {
+        font-size: 12px;
+        background-color: rgb(220, 215, 215);
+        text-align: center;
+    }
+    .tablaGris tr {
+        background-color: white;
+    }
+    .tablaGris td {
+        font-size:12px;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: black ;
+        text-align: center;
+    }
+
+    .tablaAmarilla {
+        font-size: 10px;
+        color: #333333;
+        width: 100%;
+        height: 20px;
+        border-width: 1px;
+        border-color: black;
+        border-collapse:collapse;
+    }
+    .tablaAmarilla th {
+        font-size: 12px;
+        background-color: #f2ff00;
+        text-align: center;
+    }
+    .tablaAmarilla tr {
+        background-color: white;
+    }
+    .tablaAmarilla td {
+        font-size:12px;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: black ;
+        text-align: center;
+    }
+    .link{
+        color:  blue;
+    }
+
+    .img_reconstruccion{
+        margin-left:40px;
+    }
+
+</style>
+<body>
+    <head>
+        <div class="col-xs-2">
+            
+            <img src="{{{IMG_PATH}}}" height="60"> <img class="img_reconstruccion" src="{{{IMG_PATH_2}}}" height="60">
+            <br>
+            <br>
+            <div class="center"></div><p>Dirección Nacional de Transporte Automotor de Pasajeros <br>
+                Subsecretaria de Transporte Automotor de la Nación</p></div>
+        </div>
+    </head>
+    <div class="datos_contenido" id="amb_pedido">
+        <form action="{{{FORM}}}" method="POST" autocomplete="off" id="pedido">
+            <div class="fecha_superior">
+                <p>Buenos Aires, {{{FECHA_ACTUAL}}}<br>
+                Ref: Asignación de numeración de Marbetes y/o Tickets según (RES74-E2016)</p>
+            </div>
+            <div class= "just">
+                <p>Sr Representante de la Empresa {{{EMPRESA_NOMBRE}}}.</p>
+            </div>
+            <div class="primeralinea">
+                <p>Tengo el agrado de dirigirme a usted en relación a su solicitud presentada el {{{FECHA_SOLICITUD}}} a fin de notificarle la asignación de números de acuerdo a lo solicitado para la imprenta <strong>{{{IMPRENTA_NOMBRE}}}</strong>, sita en {{{IMPRENTA_DIRECCION}}}. Se remite el siguiente detalle.</p>
+            </div><br>
+            <div>
+                <div>TICKET Marbete: {{{DESCRIPCION}}} Tipo: {{{TIPO_MARBETE}}}</div>
+                <table class="tablaGris" border="1">
+                    <tr>
+                        <th>Cuit</th>
+                        <th>CNRT/Hab</th>
+                        <th>Empresa</th>
+                        <th>Pedido</th>
+                        <th>Asignado</th>
+                        <th>Fecha</th>
+                        <th>Numeración</th>
+                    </tr>
+                    <tr>
+                        <td> {{{EMPRESA_CUIT}}} </td>
+                        <td> {{{CNRT}}} </td>
+                        <td> {{{EMPRESA_NOMBRE}}} </td>
+                        <td> {{{CANTIDAD_SOLICITADA}}} </td>
+                        <td> {{{CANTIDAD_AUTORIZADA}}} </td>
+                        <td> {{{FECHA_AUTORIZADO}}} </td>
+                        <td> {{{CNRT}}} {{{ID_MARBETE}}} {{{LETRAS_INICIO}}} {{{DIGITOS_INICIO}}} - {{{CNRT}}} {{{ID_MARBETE}}} {{{LETRAS_FIN}}} {{{DIGITOS_FIN}}} </td>
+                    </tr>
+                </table>
+                <!--<br>
+                <div>TICKET Marbete Bolso de MANO (Amarillo) LARGA DISTANCIA Y TURISMO</div>
+                <table class="tablaAmarilla" border="1">
+                    <tr>
+                        <th>Cuit</th>
+                        <th>CNRT/Hab</th>
+                        <th>Empresa</th>
+                        <th>Pedido</th>
+                        <th>Asignado</th>
+                        <th>Fecha</th>
+                        <th>Numeración</th>
+                    </tr>
+                    <tr>
+                        <td> {{{EMPRESA_CUIT}}} </td>
+                        <td> {{{CNRT}}} </td>
+                        <td> {{{EMPRESA_NOMBRE}}} </td>
+                        <td> {{{CANTIDAD_SOLICITADA}}} </td>
+                        <td> {{{CANTIDAD_AUTORIZADA}}} </td>
+                        <td> {{{FECHA_AUTORIZADO}}} </td>
+                        <td> {{{NRO_INICIAL_LDT}}} - {{{NRO_FINAL_LDT}}} </td>
+                    </tr>
+                </table>
+                <br>-->
+            </div>
+
+            <!-- Información -->
+            <br>
+            <div class="just">
+                <STRONG>LA NUMERACION ASIGNADA ES DE USO EXCLUSIVO DE LA EMPRESA SOLICITANTE, NO AUTORIZÁNDOSE LA TRANSFERENCIA Y/O CESIÓN DE LA NUMERACIÓN POR PARTE DE LA EMPRESA A UN TERCERO POR NINGUN CONCEPTO, SIN LA PERTINENTE AUTORIZACIÓN EXPRESA DE LA AUTORIDAD ADMININSTRATIVA COMPETENTE.</STRONG>
+            </div><br>
+            <!-- Nota-->
+            <div class="just">
+                NOTA: <strong>“La empresa”</strong> se obliga a informar a la Dirección Nacional de Transporte Automotor por medio fehaciente o al correo electrónico <span class="link">marbetes@transporte.gob.ar</span> .
+                Al momento que  se haga efectiva la entrega de los marbetes autorizados por la imprenta elegida. En caso de no ser informado en ese período de 15 días hábiles, se darán por cancelados los mismos, perdiendo toda validez y  teniendo la empresa que solicitarlos nuevamente ante esta DIRECCION. No se podrán imprimir parciales 
+            </div><br>
+            <div class="izq">
+                <div class="gris">
+                    Autorizado por: <br>
+                    Dr. Alejandro Storello<br>
+                    Director Nacional de Transporte Automotor de Pasajeros<br>
+                    Subsecretaria de Transporte Automotor de la Nación.<br>
+                </div>
+            </div><br>
+            <div class="izq">
+                Av. Paseo Colón 315 Piso 1 CABA (C1063ACD)<br>
+                Buenos Aires, {{{FECHA_ACTUAL}}}<br>
+                <br><div class="gris">Retiro: ___________________ Aclaración: </div>
+            </div>
+        </form>
+    </div>
+</body>

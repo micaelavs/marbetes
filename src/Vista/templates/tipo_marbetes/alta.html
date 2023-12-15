@@ -1,0 +1,26 @@
+<form id="{{{FORM}}}" method='POST' action="" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="control-label" for="tipo">Tipo<span class="text-danger"> * </span></label>
+                <input type="text" class="form-control" id="tipo" name="tipo" value="{{{TIPO}}}" required>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="control-label" for="descripcion">Descripcion<span class="text-danger"> * </span></label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion" value="{{{DESCRIPCION}}}" required>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 text-right">
+            <button type="submit" class="btn btn-primary" data-placement="left" name="boton_tipo"
+                value="{{{OPERACION}}}" id='boton_tipo' title="Guardar">GUARDAR</button>
+            <a href="{{{CANCELAR}}}" class="btn btn-default">CANCELAR</a>
+        </div>
+    </div>
+</form>

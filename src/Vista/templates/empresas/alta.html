@@ -1,0 +1,82 @@
+<form id="{{{FORM}}}" method='POST' action="">
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label class="control-label" for="cuit">Cuit<span class="required">*</span></label>
+      <input type="number" class="form-control" id="cuit" name="cuit" value="{{{CUIT}}}" {{{DISABLED}}}>
+      <span class="label label-danger" id="aviso"></span>
+    </div>
+  </div>
+</div>
+<div class="row">
+ <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label class="control-label" for="codigo_cnrt">Código CNRT<span class="required">*</span></label>
+      <span class="form-control" id="codigo_cnrt" name="codigo_cnrt" disabled>{{{CODIGO_CNRT}}}</span>
+      <input type="hidden" class="form-control" id="codigo_cnrt" name="codigo_cnrt" value="{{{CODIGO_CNRT}}}">
+    </div>
+  </div>
+</div>
+ <div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label class="control-label" for="razon_social">Razón Social<span class="required">*</span></label>
+      <span class="form-control" id="razon_social" disabled>{{{RAZON_SOCIAL}}}</span>
+      <input type="hidden" class="form-control" id="razon_social" name="razon_social" value="{{{RAZON_SOCIAL}}}">
+    </div>
+  </div>
+ </div>
+<div class="row">
+   <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <label class="control-label" for="id_camara">Cámara</label>
+          <select class="form-control" id="id_camara" name="id_camara">
+            <option value=""> Seleccione </option>
+            {{{CAMARA}}}
+              <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+            {{{/CAMARA}}}
+          </select>
+    </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label class="control-label" for="razon_social">Direccion<span class="required">*</span></label>
+      <input type="text" class="form-control" id="direccion" name="direccion" value="{{{DIRECCION}}}">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label class="control-label" for="nombre_apoderado">Nombre Apoderado<span class="required">*</span></label>
+      <input type="text" class="form-control" id="nombre_apoderado" name="nombre_apoderado"
+        value="{{{NOMBRE_APODERADO}}}">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label class="control-label" for="dni_apoderado">Dni Apoderado<span class="required">*</span></label>
+      <input type="number" class="form-control" id="dni_apoderado" name="dni_apoderado" value="{{{DNI_APODERADO}}}">
+      <span class="label label-danger" id="aviso"></span>
+    </div>
+  </div>
+</div>
+<br>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 text-right">
+      <button type="submit" class="btn btn-primary" data-placement="left" name="boton_empresa" value="{{{OPERACION}}}" id='boton_empresa' title="Guardar">GUARDAR</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+  </div>
+</form>

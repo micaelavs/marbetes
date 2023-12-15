@@ -1,0 +1,59 @@
+<form id="{{{FORM}}}" method='POST' action="">
+<div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label" for="id_empresa">Empresa</label>
+        <span class="form-control" id="id_empresa" name="id_empresa" disabled>{{{EMPRESA}}}</span>
+      </div>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group">
+      <label class="control-label" for="id_tipo_marbete">Tipo Marbete</label>
+      <span class="form-control" id="id_tipo_marbete" disabled>{{{TIPO_MARBETE}}}</span>
+    </div>
+  </div> 
+  <div class="col-md-3">
+    <div class="form-group">
+      <label class="control-label" for="id_imprenta">Imprenta</label>
+      <span class="form-control" id="id_imprenta" name="id_imprenta" disabled>{{{IMPRENTA}}}</span>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <div class="form-group">
+       <label class="control-label" for="fecha_solicitud">Fecha solicitud</label>
+      <span class="form-control" id="fecha_solicitud" name="fecha_solicitud" disabled>{{{FECHA_SOLICITUD}}}</span>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group">
+       <label class="control-label" for="cantidad_solicitada">Cantidad solicitada</label>
+      <span class="form-control" id="cantidad_solicitada" name="cantidad_solicitada" disabled>{{{CANTIDAD_SOLICITADA}}}</span>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group">
+      <label for="fecha_solicitud" class="control-label">Fecha de autorización<span class="text-danger"> *</span></label>
+      <div class='input-group date fecha_autorizacion'>
+        <input type='text' required class="form-control" id="fecha_autorizacion" name="fecha_autorizacion" value="{{{FECHA_AUTORIZACION}}}">
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group">
+        <label class="control-label" for="cantidad_autorizada">Cantidad Autorizada<span class="required">*</span></label>
+        <input type='number' required class="form-control" id="cantidad_autorizada" name="cantidad_autorizada" value="{{{CANTIDAD_AUTORIZADA}}}">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3"></div>
+   <div class="col-md-3"></div>
+    <div class="col-md-6 text-right">
+      <button type="submit" class="btn btn-primary" data-placement="left" name="boton_autorizar" value="{{{OPERACION}}}" id='boton_autorizar' title="Guardar">GUARDAR</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+</div>
+</form>

@@ -1,0 +1,28 @@
+<form id="{{{FORM}}}" method='POST' action="">
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label class="control-label" for="nombre">Nombre<span class="required">*</span></label>
+      <input type="text" class="form-control" id="nombre" name="nombre" value="{{{NOMBRE}}}">
+    </div>
+  </div>
+ </div>
+ <div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label class="control-label" for="descripcion">Descripcion<span class="required">*</span></label>
+      <input type="text" class="form-control" id="descripcion" name="descripcion" value="{{{DESCRIPCION}}}">
+    </div>
+  </div>
+ </div>
+<br>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 text-right">
+      <button type="submit" class="btn btn-primary" data-placement="left" name="boton_camara" value="{{{OPERACION}}}" id='boton_camara' title="Guardar">GUARDAR</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+  </div>
+</form>
