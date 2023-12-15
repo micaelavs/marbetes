@@ -1,2 +1,2 @@
-## SIG_VEHICULOS - Sistema de administracion de Vehiculos.
-Este sistema es complementario de SIG
+## Marbetes - Sistema para gestión de impresión de Marbetes
+
